@@ -1,0 +1,5 @@
+---
+- hosts: win_servers
+  tasks:
+  - name: Get whoami information
+    win_whoami:

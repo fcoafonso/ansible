@@ -1,0 +1,8 @@
+---
+- hosts: win_servers
+  tasks:
+  - name: Install Notepad++
+    win_chocolatey:
+      name: notepadplusplus.install
+      version: 7.8.4
+      state: present

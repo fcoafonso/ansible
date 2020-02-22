@@ -1,0 +1,10 @@
+---
+- hosts: win_servers
+  tasks:
+  - name: Copy folder to C:\Temp (results in C:\Temp\playbooks)
+    win_copy:
+      src: /etc/ansible/playbooks/examples/TreeSizeFreev2.2.1
+      dest: C:\Temp
+  - name: Run remote PowerShell Script
+    #win_command: powershell.exe -ExecutionPolicy ByPass -File C:/temp/Deploy-Application.ps1
+    win_shell: C:\Temp\TreeSizeFreev2.2.1\Deploy-Application.exe

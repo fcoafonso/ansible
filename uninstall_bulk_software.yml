@@ -1,0 +1,14 @@
+---
+- hosts: win_servers
+  tasks:
+  - name: Uninstall Notepad++
+    win_chocolatey:
+      name: notepadplusplus.install
+      state: absent
+
+  - name: Uninstall VLC
+    win_chocolatey:
+      name: vlc
+      state: absent
+
+
