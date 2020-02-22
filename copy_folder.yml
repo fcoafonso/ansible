@@ -3,7 +3,7 @@
   tasks:
   - name: Copy folder to C:\Temp (results in C:\Temp\playbooks)
     win_copy:
-      src: /etc/ansible/playbooks
+      src: /var/lib/awx/projects
       dest: C:\Temp
 
 #- name: Copy a single file
