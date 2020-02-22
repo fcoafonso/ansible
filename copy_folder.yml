@@ -1,5 +1,5 @@
 ---
-- hosts: win_servers
+- hosts: all
   tasks:
   - name: Copy folder to C:\Temp (results in C:\Temp\playbooks)
     win_copy:
