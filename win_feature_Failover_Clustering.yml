@@ -1,0 +1,8 @@
+---
+- hosts: win_servers
+  tasks:
+  - name: Install Failover Clustering service in Windows server
+    win_feature:
+      name: Failover-Clustering
+      state: present
+      include_management_tools: yes
