@@ -1,7 +1,7 @@
 ---
 - hosts: win_servers
   tasks:
-  - name: Install IIS (Web-Server only)
+  - name: Install IIS (Web-Server) in Windows server
     win_feature:
       name: Web-Server
       state: present
