@@ -1,0 +1,9 @@
+  
+---
+- hosts: win_servers
+  tasks:
+  - name: Install DHCP service in Windows server
+    win_feature:
+      name: DHCP
+      state: present
+      include_management_tools: yes
