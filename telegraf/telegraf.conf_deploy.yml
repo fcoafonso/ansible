@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: Copy a single file
+    win_copy:
+     src: /srv/myfiles/foo.conf
+     dest: C:\Program Files\telegraf\telegraf.conf
