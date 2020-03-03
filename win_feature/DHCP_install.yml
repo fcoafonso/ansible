@@ -1,6 +1,5 @@
-  
 ---
-- hosts: win_servers
+- hosts: all
   tasks:
   - name: Install DHCP service in Windows server
     win_feature:
