@@ -9,8 +9,10 @@
   
   - name: Copy Telegraf configuration file (telegraf.conf)
     win_copy:
-     src: /etc/ansible/software/telegraf/telegraf.conf
+     #src: /etc/ansible/software/telegraf/telegraf.conf
+     src: https://github.com/fcoafonso/ansible/blob/master/telegraf/telegraf.conf
      dest: C:\Program Files\telegraf\telegraf.conf
+     remote_src: yes
      force: yes
   
   - name: Install Telegraf as a service
