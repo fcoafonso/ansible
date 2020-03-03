@@ -1,5 +1,5 @@
 ---
-- hosts: win_servers
+- hosts: all
   tasks:
   - name: Install Failover Clustering service in Windows server
     win_feature:
