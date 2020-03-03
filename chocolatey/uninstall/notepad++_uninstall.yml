@@ -1,5 +1,5 @@
 ---
-- hosts: win_servers
+- hosts: all
   tasks:
   - name: Uninstall Notepad++
     win_chocolatey:
