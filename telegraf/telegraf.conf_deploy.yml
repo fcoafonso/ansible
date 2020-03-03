@@ -1,7 +1,8 @@
 ---
 - hosts: all
   tasks:
-  - name: Copy a single file
+  - name: Copy Telegraf configuration file (telegraf.conf)
     win_copy:
-     src: /srv/myfiles/foo.conf
+     src: /etc/ansible/software/telegraf/telegraf.conf
      dest: C:\Program Files\telegraf\telegraf.conf
+     force: yes
