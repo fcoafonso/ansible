@@ -21,4 +21,4 @@
   - name: Verify if Telegraf service is started
     win_service:
       name: telegraf
-      state: started
+      state: restarted
