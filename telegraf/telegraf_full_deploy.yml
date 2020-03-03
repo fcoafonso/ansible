@@ -16,6 +16,7 @@
   - name: Install Telegraf as a service
     win_command: "C:\Program Files\Telegraf\telegraf.exe"
       args: --service install
+      
   - name: Verify if Telegraf service is started
     win_service:
       name: telegraf
