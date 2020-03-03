@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Uninstall Microsoft Sysinternals
+    win_chocolatey:
+      name: sysinternals
+      version: 2019.12.19
+      state: absent
