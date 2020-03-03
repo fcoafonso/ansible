@@ -6,3 +6,11 @@
      src: /etc/ansible/software/telegraf/telegraf.conf
      dest: C:\Program Files\telegraf\telegraf.conf
      force: yes
+  
+  - name: Install Telegraf as a service
+    win_command: C:\"Program Files"\Telegraf\telegraf.exe --service install
+  
+  - name: Verify if Telegraf service is started
+    win_service:
+      name: telegraf
+      state: started
