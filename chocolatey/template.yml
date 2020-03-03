@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Install / Uninstall Microsoft Edge
+    win_chocolatey:
+      name: microsoft-edge
+      version: 79.0.309.71
+      state: present / absent
