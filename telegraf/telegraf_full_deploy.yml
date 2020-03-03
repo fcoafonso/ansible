@@ -1,6 +1,12 @@
 ---
 - hosts: all
   tasks:
+  - name: Install Telegraf Agent
+    win_chocolatey:
+      name: telegraf
+      version: 1.13.4
+      state: present
+  
   - name: Copy Telegraf configuration file (telegraf.conf)
     win_copy:
      src: /etc/ansible/software/telegraf/telegraf.conf
