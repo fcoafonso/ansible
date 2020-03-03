@@ -1,5 +1,5 @@
 ---
-- hosts: win_servers
+- hosts: all
   tasks:
   - name: Install IIS (Web-Server) in Windows server
     win_feature:
