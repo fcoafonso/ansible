@@ -7,17 +7,17 @@
       version: 1.13.4
       state: present
   
+  - name: Remove default Telegraf.conf file
+    win_file:
+      path: C:\Program Files\telegraf\telegraf.conf
+      state: absent
+
   - name: Copy Telegraf configuration file (telegraf.conf)
     win_copy:
-     #src: /etc/ansible/software/telegraf/telegraf.conf
-     src: https://github.com/fcoafonso/ansible/blob/master/telegraf/telegraf.conf
+     src: '\\mbi.lab\NETLOGON\Software\Telegraf\telegraf.conf'
      dest: C:\Program Files\telegraf\telegraf.conf
      remote_src: yes
-     force: yes
-  
-  - name: Install Telegraf as a service
-    win_shell: '"C:\Program Files\Telegraf\telegraf.exe" --service install'
-      
+
   - name: Verify if Telegraf service is started
     win_service:
       name: telegraf
