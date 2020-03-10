@@ -18,7 +18,8 @@
      dest: C:\Program Files\telegraf\telegraf.conf
      remote_src: yes
 
-  - name: Verify if Telegraf service is started
+  - name: Set Telegraf service to start delayed and start it
     win_service:
       name: telegraf
+      start_mode: delayed
       state: restarted
