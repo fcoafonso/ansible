@@ -1,6 +1,8 @@
 [win_servers]
 host01.mbi.lab
 host02.mbi.lab
+host03.mbi.lab
+host04.mbi.lab
 
 [wsus]
 wsus.mbi.lab
